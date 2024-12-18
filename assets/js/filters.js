@@ -4,21 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const groupToggles = document.querySelectorAll(".group-toggle");
     const checkboxes = document.querySelectorAll(".filter-checkbox");
     const projectCards = document.querySelectorAll(".project-card");
-    const resetFilters = document.getElementById("reset-filters");
+    const resetFiltersBtn = document.getElementById("reset-filters");
 
     // Toggle the main dropdown
     filterToggle.addEventListener("click", () => {
         filterDropdown.classList.toggle("show");
     });
 
-    // Close dropdown if clicked outside
-    document.addEventListener("click", (event) => {
-        if (!filterDropdown.contains(event.target) && event.target !== filterToggle) {
-            filterDropdown.classList.remove("show");
-        }
-    });
-
-    // Toggle individual groups
+    // Collapse/Expand Group Content
     groupToggles.forEach((toggle) => {
         toggle.addEventListener("click", () => {
             const content = toggle.nextElementSibling;
@@ -26,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Filter projects based on selected categories
+    // Filter Projects Based on Selected Categories
     const filterProjects = () => {
         const selectedCategories = Array.from(checkboxes)
             .filter((checkbox) => checkbox.checked)
@@ -42,13 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // Add event listeners to checkboxes
     checkboxes.forEach((checkbox) => {
         checkbox.addEventListener("change", filterProjects);
     });
 
-    // Reset all filters
-    resetFilters.addEventListener("click", () => {
+    // Reset Filters
+    resetFiltersBtn.addEventListener("click", () => {
         checkboxes.forEach((checkbox) => (checkbox.checked = false));
         projectCards.forEach((card) => (card.style.display = "block"));
     });
