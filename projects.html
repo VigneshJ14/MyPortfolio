@@ -21,23 +21,29 @@
 
         <!-- Multi-Category Scrollable Dropdown Filter -->
         <div class="filter-dropdown-container">
-            <button id="filter-toggle" class="filter-dropdown-toggle">Filter by Categories</button>
-            <div id="filter-checkboxes" class="filter-dropdown">
-                <label>
-                    <input type="checkbox" value="machine-learning" class="filter-checkbox"> Machine Learning
-                </label>
-                <label>
-                    <input type="checkbox" value="robotics" class="filter-checkbox"> Robotics
-                </label>
-                <label>
-                    <input type="checkbox" value="data-science" class="filter-checkbox"> Data Science
-                </label>
-                <label>
-                    <input type="checkbox" value="signal-processing" class="filter-checkbox"> Signal Processing
-                </label>
-                <!-- Add more categories here -->
+            <!-- Field-Specific Categories Dropdown -->
+            <button id="field-toggle" class="filter-dropdown-toggle">Filter by Field</button>
+            <div id="field-checkboxes" class="filter-dropdown">
+                <label><input type="checkbox" value="machine-learning" class="filter-checkbox"> Machine Learning</label>
+                <label><input type="checkbox" value="robotics" class="filter-checkbox"> Robotics</label>
+                <label><input type="checkbox" value="data-science" class="filter-checkbox"> Data Science</label>
+                <label><input type="checkbox" value="computer-vision" class="filter-checkbox"> Computer Vision</label>
+                <label><input type="checkbox" value="signal-processing" class="filter-checkbox"> Signal Processing</label>
             </div>
         </div>
+        
+        <div class="filter-dropdown-container">
+            <!-- Tools/Technologies Dropdown -->
+            <button id="tools-toggle" class="filter-dropdown-toggle">Filter by Tools</button>
+            <div id="tools-checkboxes" class="filter-dropdown">
+                <label><input type="checkbox" value="python" class="filter-checkbox"> Python</label>
+                <label><input type="checkbox" value="tensorflow" class="filter-checkbox"> TensorFlow</label>
+                <label><input type="checkbox" value="pytorch" class="filter-checkbox"> PyTorch</label>
+                <label><input type="checkbox" value="ros" class="filter-checkbox"> ROS</label>
+                <label><input type="checkbox" value="matlab" class="filter-checkbox"> MATLAB</label>
+            </div>
+        </div>
+        
 
 
 
