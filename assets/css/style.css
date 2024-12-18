@@ -101,3 +101,23 @@ nav a:hover::after {
 #scrollTopBtn:hover {
     background-color: #0056b3;
 }
+
+.filter-checkboxes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.filter-checkboxes label {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.filter-checkboxes input {
+    cursor: pointer;
+}

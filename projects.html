@@ -19,42 +19,47 @@
     <main>
         <h1>My Projects</h1>
 
-        <!-- Filter Dropdown -->
-        <div class="filter-dropdown">
-            <label for="project-filter">Filter by Category:</label>
-            <select id="project-filter">
-                <option value="all">Show All</option>
-                <option value="ai">AI</option>
-                <option value="robotics">Robotics</option>
-                <option value="data-science">Data Science</option>
-                <option value="signal-processing">Signal Processing</option>
-            </select>
+        <!-- Multi-Category Filter -->
+        <div class="filter-checkboxes">
+            <label>
+                <input type="checkbox" value="machine-learning" class="filter-checkbox"> Machine Learning
+            </label>
+            <label>
+                <input type="checkbox" value="robotics" class="filter-checkbox"> Robotics
+            </label>
+            <label>
+                <input type="checkbox" value="data-science" class="filter-checkbox"> Data Science
+            </label>
+            <label>
+                <input type="checkbox" value="signal-processing" class="filter-checkbox"> Signal Processing
+            </label>
         </div>
+
 
         <!-- Projects Grid -->
         <div class="projects-container">
-            <div class="project-card" data-category="ai robotics">
+            <div class="project-card" data-category="machine-learning robotics">
                 <img src="assets/images/project1.png" alt="Project 1">
                 <h3>American Sign Language Image Recognition</h3>
                 <p>Classifies ASL alphabets using computer vision.</p>
                 <a href="https://github.com/yourusername/project1" target="_blank">View Project</a>
             </div>
 
-            <div class="project-card" data-category="ai robotics">
+            <div class="project-card" data-category="machine-learning robotics">
                 <img src="assets/images/project2.png" alt="Project 2">
                 <h3>Neural Network Jacobian Estimation</h3>
                 <p>Centers Panda Robot images using neural network models.</p>
                 <a href="https://github.com/yourusername/project2" target="_blank">View Project</a>
             </div>
 
-            <div class="project-card" data-category="ai data-science">
+            <div class="project-card" data-category="machine-learning data-science">
                 <img src="assets/images/project3.png" alt="Project 3">
                 <h3>Churn Prediction - Data Exploration</h3>
                 <p>Data-driven insights for predicting customer churn.</p>
                 <a href="https://github.com/yourusername/project3" target="_blank">View Project</a>
             </div>
 
-            <div class="project-card" data-category="ai data-science">
+            <div class="project-card" data-category="machine-learning data-science">
                 <img src="assets/images/project3.png" alt="Project 4">
                 <h3>Financial Literacy optimizer</h3>
                 <p>Gives suggestions on finances to improve credit score.</p>
@@ -75,7 +80,7 @@
                 <a href="https://github.com/yourusername/project5" target="_blank">View Project</a>
             </div>
 
-            <div class="project-card" data-category="ai">
+            <div class="project-card" data-category="machine-learning">
                 <img src="assets/images/project6.png" alt="Project 7">
                 <h3>Scalable CNN Design for CIFAR-10</h3>
                 <p>Designs CNN with pruning/compression for efficient inference.</p>

@@ -1,19 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const filterDropdown = document.getElementById("project-filter");
+    const checkboxes = document.querySelectorAll(".filter-checkbox");
     const projectCards = document.querySelectorAll(".project-card");
 
-    // Multi-Tag Filtering Logic
-    filterDropdown.addEventListener("change", (event) => {
-        const filter = event.target.value;
+    // Filter projects based on selected categories
+    const filterProjects = () => {
+        const selectedCategories = Array.from(checkboxes)
+            .filter((checkbox) => checkbox.checked)
+            .map((checkbox) => checkbox.value);
 
         projectCards.forEach((card) => {
-            const categories = card.getAttribute("data-category").split(" ");
-            if (filter === "all" || categories.includes(filter)) {
+            const cardCategories = card.getAttribute("data-category").split(" ");
+
+            // Show the card if it matches any of the selected categories
+            if (selectedCategories.length === 0 || selectedCategories.some((cat) => cardCategories.includes(cat))) {
                 card.style.display = "block";
             } else {
                 card.style.display = "none";
             }
         });
+    };
+
+    // Add event listeners to checkboxes
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", filterProjects);
     });
 
     // Scroll Animation for Project Cards
@@ -27,17 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     window.addEventListener("scroll", revealCards);
-    revealCards(); // Trigger on page load to check initially visible cards
+    revealCards(); // Initial load animation
 
-    // Scroll-to-Top Button Logic
+    // Scroll-to-Top Button
     const scrollTopBtn = document.getElementById("scrollTopBtn");
-
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 200) {
-            scrollTopBtn.style.display = "block";
-        } else {
-            scrollTopBtn.style.display = "none";
-        }
+        scrollTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
     });
 
     scrollTopBtn.addEventListener("click", () => {
