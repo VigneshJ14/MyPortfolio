@@ -18,13 +18,16 @@
     <main>
         <h1>My Projects</h1>
 
-        <!-- Filter Buttons -->
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">Show All</button>
-            <button class="filter-btn" data-filter="ai">AI</button>
-            <button class="filter-btn" data-filter="robotics">Robotics</button>
-            <button class="filter-btn" data-filter="data-science">Data Science</button>
-            <button class="filter-btn" data-filter="signal-processing">Signal Processing</button>
+        <!-- Filter Dropdown -->
+        <div class="filter-dropdown">
+            <label for="project-filter">Filter by Category:</label>
+            <select id="project-filter">
+                <option value="all">Show All</option>
+                <option value="ai">AI</option>
+                <option value="robotics">Robotics</option>
+                <option value="data-science">Data Science</option>
+                <option value="signal-processing">Signal Processing</option>
+            </select>
         </div>
 
         <!-- Projects Grid -->
@@ -77,6 +80,7 @@
         <p>&copy; 2024 Vignesh | All Rights Reserved</p>
     </footer>
 
+    <!-- JavaScript -->
     <script src="assets/js/filters.js"></script>
 </body>
 </html>

@@ -58,3 +58,21 @@ nav a {
 .project-card:hover {
     transform: scale(1.05);
 }
+
+.filter-dropdown {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.filter-dropdown label {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+#project-filter {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
