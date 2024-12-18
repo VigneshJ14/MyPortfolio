@@ -116,7 +116,7 @@ nav a:hover::after {
 
 .project-card.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0);   
 }
 
 /* Dropdown Toggle Button */
