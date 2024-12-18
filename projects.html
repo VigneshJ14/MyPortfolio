@@ -19,21 +19,26 @@
     <main>
         <h1>My Projects</h1>
 
-        <!-- Multi-Category Filter -->
-        <div class="filter-checkboxes">
-            <label>
-                <input type="checkbox" value="machine-learning" class="filter-checkbox"> Machine Learning
-            </label>
-            <label>
-                <input type="checkbox" value="robotics" class="filter-checkbox"> Robotics
-            </label>
-            <label>
-                <input type="checkbox" value="data-science" class="filter-checkbox"> Data Science
-            </label>
-            <label>
-                <input type="checkbox" value="signal-processing" class="filter-checkbox"> Signal Processing
-            </label>
+        <!-- Multi-Category Scrollable Dropdown Filter -->
+        <div class="filter-dropdown-container">
+            <button id="filter-toggle" class="filter-dropdown-toggle">Filter by Categories</button>
+            <div id="filter-checkboxes" class="filter-dropdown">
+                <label>
+                    <input type="checkbox" value="machine-learning" class="filter-checkbox"> Machine Learning
+                </label>
+                <label>
+                    <input type="checkbox" value="robotics" class="filter-checkbox"> Robotics
+                </label>
+                <label>
+                    <input type="checkbox" value="data-science" class="filter-checkbox"> Data Science
+                </label>
+                <label>
+                    <input type="checkbox" value="signal-processing" class="filter-checkbox"> Signal Processing
+                </label>
+                <!-- Add more checkboxes as needed -->
+            </div>
         </div>
+
 
 
         <!-- Projects Grid -->

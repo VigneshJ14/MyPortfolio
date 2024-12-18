@@ -1,6 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const filterToggle = document.getElementById("filter-toggle");
+    const filterDropdown = document.getElementById("filter-checkboxes");
     const checkboxes = document.querySelectorAll(".filter-checkbox");
     const projectCards = document.querySelectorAll(".project-card");
+
+    // Toggle Dropdown Visibility
+    filterToggle.addEventListener("click", () => {
+        filterDropdown.classList.toggle("show");
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener("click", (event) => {
+        if (!filterDropdown.contains(event.target) && event.target !== filterToggle) {
+            filterDropdown.classList.remove("show");
+        }
+    });
 
     // Filter projects based on selected categories
     const filterProjects = () => {
@@ -10,8 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         projectCards.forEach((card) => {
             const cardCategories = card.getAttribute("data-category").split(" ");
-
-            // Show the card if it matches any of the selected categories
             if (selectedCategories.length === 0 || selectedCategories.some((cat) => cardCategories.includes(cat))) {
                 card.style.display = "block";
             } else {
@@ -40,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Scroll-to-Top Button
     const scrollTopBtn = document.getElementById("scrollTopBtn");
+
     window.addEventListener("scroll", () => {
         scrollTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
     });
