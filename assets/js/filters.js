@@ -3,11 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterDropdown = document.getElementById("filter-checkboxes");
     const checkboxes = document.querySelectorAll(".filter-checkbox");
     const projectCards = document.querySelectorAll(".project-card");
-    const modal = document.getElementById("project-modal");
-    const modalTitle = document.getElementById("modal-title");
-    const modalDescription = document.getElementById("modal-description");
-    const modalLink = document.getElementById("modal-link");
-    const closeModal = document.querySelector(".close");
+    
 
     // Toggle Dropdown Visibility
     filterToggle.addEventListener("click", () => {
@@ -65,13 +61,34 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTopBtn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("project-modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDescription = document.getElementById("modal-description");
+    const modalLink = document.getElementById("modal-link");
+    const closeModal = document.querySelector(".close");
+
+    // Check if project cards exist
+    const projectCards = document.querySelectorAll(".project-card");
+    if (projectCards.length === 0) {
+        console.error("No project cards found on the page.");
+        return;
+    }
 
     // Open modal when a project card is clicked
-    document.querySelectorAll(".project-card").forEach((card) => {
+    projectCards.forEach((card) => {
         card.addEventListener("click", () => {
-            const title = card.querySelector("h3").innerText;
-            const description = card.querySelector("p").innerText;
-            const link = card.querySelector("a").href;
+            // Extract content from the project card
+            const title = card.querySelector("h3")?.innerText;
+            const description = card.querySelector("p")?.innerText;
+            const link = card.querySelector("a")?.href;
+
+            if (!title || !description || !link) {
+                console.error("Missing content in project card:", card);
+                return;
+            }
 
             // Set modal content
             modalTitle.innerText = title;
