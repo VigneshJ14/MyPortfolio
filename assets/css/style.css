@@ -88,10 +88,12 @@ nav a:hover::after {
 }
 
 .project-card img {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+    max-width: 100%; /* Ensure images fit within the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Add rounded corners */
+    margin-bottom: 1rem; /* Space between the image and the text */
 }
+
 
 .project-card h3 {
     font-size: 1.2rem;
@@ -102,6 +104,7 @@ nav a:hover::after {
     font-size: 0.9rem;
     color: #555;
 }
+
 
 .project-card a {
     display: inline-block;
