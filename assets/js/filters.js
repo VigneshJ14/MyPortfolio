@@ -1,25 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
     const filterToggle = document.getElementById("filter-toggle");
-    const filterDropdown = document.getElementById("filter-groups");
-    const groupToggles = document.querySelectorAll(".group-toggle");
+    const filterDropdown = document.getElementById("filter-checkboxes");
     const checkboxes = document.querySelectorAll(".filter-checkbox");
     const projectCards = document.querySelectorAll(".project-card");
-    const resetFiltersBtn = document.getElementById("reset-filters");
 
-    // Toggle the main dropdown
+    // Toggle Dropdown Visibility
     filterToggle.addEventListener("click", () => {
         filterDropdown.classList.toggle("show");
     });
 
-    // Collapse/Expand Group Content
-    groupToggles.forEach((toggle) => {
-        toggle.addEventListener("click", () => {
-            const content = toggle.nextElementSibling;
-            content.classList.toggle("show");
-        });
+    // Close dropdown if clicked outside
+    document.addEventListener("click", (event) => {
+        if (!filterDropdown.contains(event.target) && event.target !== filterToggle) {
+            filterDropdown.classList.remove("show");
+        }
     });
 
-    // Filter Projects Based on Selected Categories
+    // Filter projects based on selected categories
     const filterProjects = () => {
         const selectedCategories = Array.from(checkboxes)
             .filter((checkbox) => checkbox.checked)
@@ -35,13 +32,32 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
+    // Add event listeners to checkboxes
     checkboxes.forEach((checkbox) => {
         checkbox.addEventListener("change", filterProjects);
     });
 
-    // Reset Filters
-    resetFiltersBtn.addEventListener("click", () => {
-        checkboxes.forEach((checkbox) => (checkbox.checked = false));
-        projectCards.forEach((card) => (card.style.display = "block"));
+    // Scroll Animation for Project Cards
+    const revealCards = () => {
+        projectCards.forEach((card) => {
+            const cardTop = card.getBoundingClientRect().top;
+            if (cardTop < window.innerHeight - 50) {
+                card.classList.add("visible");
+            }
+        });
+    };
+
+    window.addEventListener("scroll", revealCards);
+    revealCards(); // Initial load animation
+
+    // Scroll-to-Top Button
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.addEventListener("scroll", () => {
+        scrollTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
+    });
+
+    scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
 });
