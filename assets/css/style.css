@@ -119,9 +119,9 @@ nav a:hover::after {
     transform: translateY(0);
 }
 
-/* Multi-Select Scrollable Dropdown Filter */
+/* Dropdown Toggle Button */
 .filter-dropdown-container {
-    position: relative;
+    position: relative; /* Establish positioning context for the dropdown */
     text-align: center;
     margin: 1.5rem 0;
 }
@@ -141,9 +141,13 @@ nav a:hover::after {
     background-color: #0056b3;
 }
 
+/* Dropdown Content */
 .filter-dropdown {
     display: none; /* Hidden by default */
     position: absolute;
+    top: 100%; /* Position dropdown directly below the button */
+    left: 50%; /* Start positioning at the center of the container */
+    transform: translateX(-50%); /* Center-align dropdown under the button */
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
@@ -171,6 +175,7 @@ nav a:hover::after {
 .filter-dropdown.show {
     display: block; /* Show dropdown when toggled */
 }
+
 
 /* Scroll-to-Top Button */
 #scrollTopBtn {
