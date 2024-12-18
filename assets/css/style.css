@@ -7,6 +7,7 @@ body {
     text-align: center;
 }
 
+/* Header and Navigation Styling */
 header {
     background-color: #333;
     color: #fff;
@@ -16,10 +17,14 @@ header {
     align-items: center;
 }
 
+nav {
+    display: flex; /* Horizontal layout */
+    gap: 1.5rem; /* Space between links */
+}
+
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 1rem;
     position: relative;
     font-size: 1.1rem;
 }
@@ -36,6 +41,7 @@ nav a::after {
 nav a:hover::after {
     width: 100%;
 }
+
 
 .projects-container {
     display: flex;

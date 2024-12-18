@@ -2,17 +2,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterDropdown = document.getElementById("project-filter");
     const projectCards = document.querySelectorAll(".project-card");
 
-    // Filter functionality
+    // Multi-Tag Filtering Logic
     filterDropdown.addEventListener("change", (event) => {
         const filter = event.target.value;
 
         projectCards.forEach((card) => {
-            const category = card.getAttribute("data-category");
-            card.style.display = filter === "all" || category === filter ? "block" : "none";
+            const categories = card.getAttribute("data-category").split(" ");
+            if (filter === "all" || categories.includes(filter)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
         });
     });
 
-    // Scroll animations for project cards
+    // Scroll Animation for Project Cards
     const revealCards = () => {
         projectCards.forEach((card) => {
             const cardTop = card.getBoundingClientRect().top;
@@ -22,14 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // Reveal cards on scroll
     window.addEventListener("scroll", revealCards);
-    revealCards(); // Initial check on page load
+    revealCards(); // Trigger on page load to check initially visible cards
 
-    // Scroll-to-Top Button
+    // Scroll-to-Top Button Logic
     const scrollTopBtn = document.getElementById("scrollTopBtn");
+
     window.addEventListener("scroll", () => {
-        scrollTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
+        if (window.scrollY > 200) {
+            scrollTopBtn.style.display = "block";
+        } else {
+            scrollTopBtn.style.display = "none";
+        }
     });
 
     scrollTopBtn.addEventListener("click", () => {
