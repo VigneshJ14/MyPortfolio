@@ -1,68 +1,60 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
 header {
-    background: #333;
-    color: white;
+    background-color: #333;
+    color: #fff;
     padding: 1rem;
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     margin: 0 1rem;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.filter-buttons {
+    margin: 1rem 0;
 }
 
-.hero {
-    background: #007BFF;
+.filter-btn {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
     color: white;
-    padding: 4rem 1rem;
+    border-radius: 5px;
 }
 
-section {
-    margin: 2rem 0;
+.filter-btn.active {
+    background-color: #0056b3;
 }
 
 .projects-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
 }
 
 .project-card {
-    background: white;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin: 1rem;
     padding: 1rem;
     max-width: 300px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.project-card img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-footer {
-    background: #333;
-    color: white;
-    padding: 1rem;
-    margin-top: 2rem;
+.project-card:hover {
+    transform: scale(1.05);
 }

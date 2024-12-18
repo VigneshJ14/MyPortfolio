@@ -18,79 +18,65 @@
     <main>
         <h1>My Projects</h1>
 
-        <!-- Machine Learning/AI -->
-        <section>
-            <h2>Machine Learning / AI</h2>
-            <div class="projects-container">
-                <div class="project-card">
-                    <img src="assets/images/project1.png" alt="Project 1">
-                    <h3>American Sign Language Image Recognition</h3>
-                    <p>Classifies ASL alphabets using computer vision.</p>
-                    <a href="https://github.com/yourusername/project1" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
-                    <img src="assets/images/project2.png" alt="Project 2">
-                    <h3>Scalable CNN Design for CIFAR-10</h3>
-                    <p>Designs CNN with pruning/compression for efficient inference.</p>
-                    <a href="https://github.com/yourusername/project5" target="_blank">View Project</a>
-                </div>
-            </div>
-        </section>
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Show All</button>
+            <button class="filter-btn" data-filter="ai">AI</button>
+            <button class="filter-btn" data-filter="robotics">Robotics</button>
+            <button class="filter-btn" data-filter="data-science">Data Science</button>
+            <button class="filter-btn" data-filter="signal-processing">Signal Processing</button>
+        </div>
 
-        <!-- Robotics and Simulation -->
-        <section>
-            <h2>Robotics and Simulation</h2>
-            <div class="projects-container">
-                <div class="project-card">
-                    <img src="assets/images/project2.png" alt="Project 3">
-                    <h3>Neural Network Jacobian Estimation</h3>
-                    <p>Centers Panda Robot images using neural network models.</p>
-                    <a href="https://github.com/yourusername/project2" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
-                    <img src="assets/images/project2.png" alt="Project 7">
-                    <h3>Simulating Humanoid Robot with ROS/Gazebo</h3>
-                    <p>Simulating robot behavior in a virtual environment.</p>
-                    <a href="https://github.com/yourusername/project7" target="_blank">View Project</a>
-                </div>
+        <!-- Projects Grid -->
+        <div class="projects-container">
+            <div class="project-card" data-category="ai">
+                <img src="assets/images/project1.png" alt="Project 1">
+                <h3>American Sign Language Image Recognition</h3>
+                <p>Classifies ASL alphabets using computer vision.</p>
+                <a href="https://github.com/yourusername/project1" target="_blank">View Project</a>
             </div>
-        </section>
 
-        <!-- Data Science -->
-        <section>
-            <h2>Data Science</h2>
-            <div class="projects-container">
-                <div class="project-card">
-                    <img src="assets/images/project2.png" alt="Project 4">
-                    <h3>Churn Prediction - Data Exploration and Inference</h3>
-                    <p>Data-driven insights for predicting customer churn.</p>
-                    <a href="https://github.com/yourusername/project3" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
-                    <img src="assets/images/project2.png" alt="Project 5">
-                    <h3>Personal Financial Literacy Optimizer</h3>
-                    <p>Helps users optimize and plan personal finances.</p>
-                    <a href="https://github.com/yourusername/project4" target="_blank">View Project</a>
-                </div>
+            <div class="project-card" data-category="robotics">
+                <img src="assets/images/project2.png" alt="Project 2">
+                <h3>Neural Network Jacobian Estimation</h3>
+                <p>Centers Panda Robot images using neural network models.</p>
+                <a href="https://github.com/yourusername/project2" target="_blank">View Project</a>
             </div>
-        </section>
 
-        <!-- Signal Processing -->
-        <section>
-            <h2>Signal Processing</h2>
-            <div class="projects-container">
-                <div class="project-card">
-                    <img src="assets/images/project2.png" alt="Project 6">
-                    <h3>Dual Tone Multiple Frequency Signal Detector</h3>
-                    <p>Designed using Chebyshev and Remez filters for signal detection.</p>
-                    <a href="https://github.com/yourusername/project6" target="_blank">View Project</a>
-                </div>
+            <div class="project-card" data-category="data-science">
+                <img src="assets/images/project3.png" alt="Project 3">
+                <h3>Churn Prediction - Data Exploration</h3>
+                <p>Data-driven insights for predicting customer churn.</p>
+                <a href="https://github.com/yourusername/project3" target="_blank">View Project</a>
             </div>
-        </section>
+
+            <div class="project-card" data-category="robotics">
+                <img src="assets/images/project4.png" alt="Project 4">
+                <h3>Simulating Humanoid Robot with ROS/Gazebo</h3>
+                <p>Simulating robot behavior in a virtual environment.</p>
+                <a href="https://github.com/yourusername/project4" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card" data-category="signal-processing">
+                <img src="assets/images/project5.png" alt="Project 5">
+                <h3>Dual Tone Multiple Frequency Signal Detector</h3>
+                <p>Designed using Chebyshev and Remez filters for signal detection.</p>
+                <a href="https://github.com/yourusername/project5" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card" data-category="ai">
+                <img src="assets/images/project6.png" alt="Project 6">
+                <h3>Scalable CNN Design for CIFAR-10</h3>
+                <p>Designs CNN with pruning/compression for efficient inference.</p>
+                <a href="https://github.com/yourusername/project6" target="_blank">View Project</a>
+            </div>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Vignesh | All Rights Reserved</p>
     </footer>
+
+    <script src="assets/js/filters.js"></script>
 </body>
 </html>
