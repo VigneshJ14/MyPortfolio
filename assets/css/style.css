@@ -119,9 +119,9 @@ nav a:hover::after {
     transform: translateY(0);
 }
 
-/* Multi-Select Scrollable Dropdown Filter */
+/* Multi-Select Grouped Dropdown Filter */
 .filter-dropdown-container {
-    position: relative; /* Establish relative positioning context */
+    position: relative; /* Establish positioning context */
     text-align: center;
     margin: 1.5rem 0;
 }
@@ -141,39 +141,87 @@ nav a:hover::after {
     background-color: #0056b3;
 }
 
+/* Dropdown Content */
 .filter-dropdown {
     display: none; /* Hidden by default */
-    position: absolute; /* Position dropdown relative to the container */
-    top: calc(100% + 5px); /* Place dropdown directly below the button with spacing */
-    left: 50%; /* Align dropdown horizontally to the center of the button */
-    transform: translateX(-50%); /* Center-align the dropdown */
+    position: absolute;
+    top: calc(100% + 5px); /* Position dropdown below the button */
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
     border-radius: 5px;
-    max-height: 200px; /* Limit height for scrolling */
-    overflow-y: auto;
-    width: 250px;
-    padding: 0.5rem;
+    max-height: 400px; /* Limit height for scrolling */
+    overflow-y: auto; /* Add scroll for long content */
+    width: 300px;
+    padding: 1rem;
     z-index: 1000;
-    text-align: left;
 }
 
-.filter-dropdown label {
+/* Group Styling */
+.filter-group {
+    margin-bottom: 1rem;
+}
+
+.group-toggle {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.group-toggle:hover {
+    color: #0056b3;
+}
+
+.group-content {
+    display: none; /* Collapsed by default */
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+.group-content label {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.3rem 0;
+    margin: 0.5rem 0;
     cursor: pointer;
 }
 
-.filter-dropdown input {
+.filter-checkbox {
     cursor: pointer;
 }
 
 /* Show Dropdown when toggled */
 .filter-dropdown.show {
     display: block;
+}
+
+/* Show Group Content */
+.group-content.show {
+    display: block;
+}
+
+/* Reset Button */
+.filter-reset-btn {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-reset-btn:hover {
+    background-color: #cc0000;
 }
 
 /* Scroll-to-Top Button */
