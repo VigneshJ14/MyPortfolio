@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterDropdown = document.getElementById("filter-checkboxes");
     const checkboxes = document.querySelectorAll(".filter-checkbox");
     const projectCards = document.querySelectorAll(".project-card");
+    const modal = document.getElementById("project-modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDescription = document.getElementById("modal-description");
+    const modalLink = document.getElementById("modal-link");
+    const closeModal = document.querySelector(".close");
 
     // Toggle Dropdown Visibility
     filterToggle.addEventListener("click", () => {
@@ -59,5 +64,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     scrollTopBtn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Open modal when a project card is clicked
+    document.querySelectorAll(".project-card").forEach((card) => {
+        card.addEventListener("click", () => {
+            const title = card.querySelector("h3").innerText;
+            const description = card.querySelector("p").innerText;
+            const link = card.querySelector("a").href;
+
+            // Set modal content
+            modalTitle.innerText = title;
+            modalDescription.innerText = description;
+            modalLink.href = link;
+
+            // Show modal
+            modal.style.display = "flex";
+        });
+    });
+
+    // Close modal when the close button is clicked
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside of the modal content
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
     });
 });

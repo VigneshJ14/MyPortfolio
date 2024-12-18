@@ -33,6 +33,11 @@ nav a {
     font-size: 1.1rem;
 }
 
+nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}
+
 nav a::after {
     content: '';
     display: block;
@@ -71,8 +76,12 @@ nav a:hover::after {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     margin: 1rem;
+}
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .project-card {
@@ -204,4 +213,58 @@ footer {
     padding: 1rem;
     position: relative;
     text-align: center;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Transparent background */
+    z-index: 1000; /* Ensure modal appears above everything else */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content a {
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.modal-content a:hover {
+    text-decoration: underline;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff0000;
 }
