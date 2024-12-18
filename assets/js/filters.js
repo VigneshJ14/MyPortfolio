@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterDropdown = document.getElementById("project-filter");
     const projectCards = document.querySelectorAll(".project-card");
 
-    // Filter projects
+    // Filter functionality
     filterDropdown.addEventListener("change", (event) => {
         const filter = event.target.value;
 
@@ -12,15 +12,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Animate project cards on scroll
-    window.addEventListener("scroll", () => {
+    // Scroll animations for project cards
+    const revealCards = () => {
         projectCards.forEach((card) => {
             const cardTop = card.getBoundingClientRect().top;
             if (cardTop < window.innerHeight - 50) {
                 card.classList.add("visible");
             }
         });
-    });
+    };
+
+    // Reveal cards on scroll
+    window.addEventListener("scroll", revealCards);
+    revealCards(); // Initial check on page load
 
     // Scroll-to-Top Button
     const scrollTopBtn = document.getElementById("scrollTopBtn");
