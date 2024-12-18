@@ -1,4 +1,131 @@
-/* General Filter Dropdown Styles */
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 1rem 0;
+}
+
+/* Header and Navigation Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end; /* Align navigation to the right */
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem; /* Space between links */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007bff;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 1rem;
+    background: #f4f4f4;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* About Section */
+.about {
+    padding: 2rem;
+    background: #fff;
+}
+
+/* Projects Container */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Multi-Select Grouped Dropdown Filter */
 .filter-dropdown-container {
     position: relative;
     text-align: center;
@@ -21,25 +148,25 @@
 
 /* Dropdown Content */
 .filter-dropdown {
-    display: none; /* Hidden by default */
+    display: none;
     position: absolute;
-    top: calc(100% + 5px); /* Place dropdown directly below button */
+    top: calc(100% + 5px);
     left: 50%;
     transform: translateX(-50%);
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
     border-radius: 5px;
-    max-height: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    max-height: 400px;
     overflow-y: auto;
-    width: 300px;
     padding: 1rem;
-    z-index: 1000;
     text-align: left;
+    z-index: 1000;
 }
 
 .filter-dropdown.show {
-    display: block; /* Show dropdown */
+    display: block;
 }
 
 /* Group Styling */
@@ -55,8 +182,8 @@
     font-weight: bold;
     text-align: left;
     cursor: pointer;
-    width: 100%;
     padding: 0.5rem 0;
+    width: 100%;
 }
 
 .group-toggle:hover {
@@ -64,13 +191,12 @@
 }
 
 .group-content {
-    display: none; /* Hidden by default */
-    margin-top: 0.5rem;
+    display: none;
     padding-left: 1rem;
 }
 
 .group-content.show {
-    display: block; /* Show content when toggled */
+    display: block;
 }
 
 .group-content label {
@@ -78,6 +204,10 @@
     align-items: center;
     gap: 0.5rem;
     margin: 0.5rem 0;
+    cursor: pointer;
+}
+
+.filter-checkbox {
     cursor: pointer;
 }
 
@@ -93,12 +223,39 @@
     color: white;
     border: none;
     border-radius: 5px;
-    width: 100%;
     padding: 0.5rem;
     font-size: 1rem;
     cursor: pointer;
+    width: 100%;
 }
 
 .reset-filters-btn:hover {
     background-color: #cc0000;
+}
+
+/* Scroll-to-Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#scrollTopBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
 }
