@@ -95,9 +95,30 @@
     <div id="project-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2 id="modal-title">Project Title</h2>
-            <p id="modal-description">Details about the project will appear here.</p>
-            <a id="modal-link" href="#" target="_blank">View Project</a>
+            <h2 id="modal-title">American Sign Language Image Recognition</h2>
+            <p id="modal-description">
+                This project aimed to develop an algorithm capable of recognizing American Sign Language (ASL) hand gestures for the alphabet. By using a robust pipeline that incorporated advanced image preprocessing and machine learning techniques, this project achieved an accuracy of up to 92%. The model can classify hand gestures under moderate noise and adverse lighting conditions, making it highly practical for real-world applications like aiding communication with the deaf or ASL transcription.
+            </p>
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Utilized the Bag-of-Words approach adapted for image classification.</li>
+                <li>Implemented Scale-Invariant Feature Transform (SIFT) for keypoint detection.</li>
+                <li>Used K-means Clustering to create a visual vocabulary for feature representation.</li>
+                <li>Classified gestures using a K-Nearest Neighbor (KNN) classifier.</li>
+                <li>Image preprocessing included Median Filtering, Image Sharpening, and Gamma Correction.</li>
+            </ul>
+            <h3>Results:</h3>
+            <ul>
+                <li>Initial accuracy: 58%</li>
+                <li>With dataset expansion: 90%</li>
+                <li>After optimization: 92%</li>
+            </ul>
+            <img src="assets/images/asl-preprocessing.png" alt="Preprocessed ASL Gesture Image">
+            <img src="assets/images/asl-pipeline.png" alt="Bag-of-Words Pipeline Visualization">
+            <img src="assets/images/asl-accuracy-chart.png" alt="Accuracy Comparison Chart">
+            <p>Explore more feature extraction methods, larger datasets, and dynamic gesture recognition.</p>
+            <a href="https://github.com/yourusername/project1" target="_blank" class="button">View Project on GitHub</a>
+            <a href="assets/documents/presentation.pdf" target="_blank" class="button">View Full Presentation</a>
         </div>
     </div>
 </body>
