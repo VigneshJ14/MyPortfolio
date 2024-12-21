@@ -102,16 +102,24 @@ document.addEventListener("DOMContentLoaded", () => {
         "jacobian-estimation": {
             title: "Neural Network Jacobian Estimation",
             description:
-                "This project uses neural networks to center Panda Robot images, optimizing performance for robotics tasks.",
+                "This project compares two methods for Jacobian estimation in visual servoing: analytical computation and a neural network-based approach. The Franka Emika Panda robot was used to center its camera view on a red box in a simulated environment, highlighting the trade-offs between accuracy and computational efficiency.",
             features: [
-                "Integrated neural network models for estimation.",
-                "Optimized for real-time robotic performance.",
+                "Analytical Jacobian computation combines kinematic and camera Jacobians.",
+                "Neural network trained on model-informed data, predicting Jacobian matrices from robot states.",
+                "Simulation performed in PyBullet environment with real-time visual feedback.",
+                "Evaluated computation time and task performance for both methods.",
             ],
-            results: ["Achieved 95% estimation accuracy."],
+            results: [
+                "Analytical Jacobian: Average computation time ~3.51s.",
+                "Neural Network Jacobian: Average computation time ~2.80s.",
+                "Both methods achieved comparable accuracy in centering the red box.",
+            ],
             images: [
-                { src: "assets/images/jacobian.png", caption: "Jacobian Estimation Visualization" },
+                { src: "assets/images/jacobian.png", caption: "Visualization of Jacobian Estimation" },
+                { src: "assets/images/servoing-simulation.png", caption: "Simulation environment with the Franka Emika Panda robot" },
             ],
             link: "https://github.com/yourusername/project2",
+            reportLink: "assets/documents/ECE276C_Report.pdf",
         },
         // Add more project data here
     };
