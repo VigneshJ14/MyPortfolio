@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Dropdown Filter Logic
     const filterToggle = document.getElementById("filter-toggle");
     const filterDropdown = document.getElementById("filter-checkboxes");
     const checkboxes = document.querySelectorAll(".filter-checkbox");
@@ -24,7 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         projectCards.forEach((card) => {
             const cardCategories = card.getAttribute("data-category").split(" ");
-            if (selectedCategories.length === 0 || selectedCategories.some((cat) => cardCategories.includes(cat))) {
+            if (
+                selectedCategories.length === 0 ||
+                selectedCategories.some((cat) => cardCategories.includes(cat))
+            ) {
                 card.style.display = "block";
             } else {
                 card.style.display = "none";
@@ -60,9 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTopBtn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
+    // Modal Logic
     const modal = document.getElementById("project-modal");
     const modalTitle = document.getElementById("modal-title");
     const modalDescription = document.getElementById("modal-description");
@@ -72,54 +75,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalLink = document.getElementById("modal-link");
     const closeModal = document.querySelector(".close");
 
-    // Project-specific modal data
     const modalData = {
         "asl-recognition": {
             title: "American Sign Language Image Recognition",
             description:
-                "This project aimed to develop an algorithm capable of recognizing American Sign Language (ASL) hand gestures for the alphabet. By using a robust pipeline that incorporated advanced image preprocessing and machine learning techniques, this project achieved an accuracy of up to 92%. The model can classify hand gestures under moderate noise and adverse lighting conditions, making it highly practical for real-world applications like aiding communication with the deaf or ASL transcription.",
-            features: [
-                "Utilized the Bag-of-Words approach adapted for image classification.",
-                "Implemented Scale-Invariant Feature Transform (SIFT) for keypoint detection.",
-                "Used K-means Clustering to create a visual vocabulary for feature representation.",
-                "Classified gestures using a K-Nearest Neighbor (KNN) classifier.",
-                "Image preprocessing included Median Filtering, Image Sharpening, and Gamma Correction.",
-            ],
-            results: [
-                "Initial accuracy: 58%",
-                "With dataset expansion: 90%",
-                "After optimization: 92%",
-            ],
+                "This project aimed to develop an algorithm capable of recognizing American Sign Language (ASL) hand gestures...",
+            features: ["Feature 1", "Feature 2"],
+            results: ["Result 1"],
             images: [
-                { src: "assets/images/asl-pipeline.png", caption: "Bag-of-Words Pipeline Visualization" },
-                { src: "assets/images/asl-accuracy-chart.png", caption: "Accuracy Comparison Chart" },
+                { src: "assets/images/asl-pipeline.png", caption: "Pipeline Visualization" },
             ],
             link: "https://github.com/yourusername/project1",
         },
-        "jacobian-estimation": {
-            title: "Neural Network Jacobian Estimation",
-            description:
-                "This project uses neural networks to center Panda Robot images, optimizing performance for robotics tasks.",
-            features: [
-                "Integrated neural network models for estimation.",
-                "Optimized for real-time robotic performance.",
-            ],
-            results: ["Achieved 95% estimation accuracy."],
-            images: [
-                { src: "assets/images/jacobian.png", caption: "Jacobian Estimation Visualization" },
-            ],
-            link: "https://github.com/yourusername/project2",
-        },
-        // Add more project data here
+        // Additional project data here
     };
 
     // Open modal when a project card is clicked
-    const projectCards = document.querySelectorAll(".project-card");
     projectCards.forEach((card) => {
         card.addEventListener("click", () => {
             const modalId = card.getAttribute("data-modal");
-            const projectData = modalData[modalId];
+            console.log("Modal triggered for project ID:", modalId); // Debugging
 
+            const projectData = modalData[modalId];
             if (!projectData) {
                 console.error(`No modal data found for ID: ${modalId}`);
                 return;
@@ -130,36 +107,22 @@ document.addEventListener("DOMContentLoaded", () => {
             modalDescription.innerText = projectData.description;
 
             // Populate features
-            modalFeatures.innerHTML = "";
-            projectData.features.forEach((feature) => {
-                const li = document.createElement("li");
-                li.textContent = feature;
-                modalFeatures.appendChild(li);
-            });
+            modalFeatures.innerHTML = projectData.features
+                .map((feature) => `<li>${feature}</li>`)
+                .join("");
 
             // Populate results
-            modalResults.innerHTML = "";
-            projectData.results.forEach((result) => {
-                const li = document.createElement("li");
-                li.textContent = result;
-                modalResults.appendChild(li);
-            });
+            modalResults.innerHTML = projectData.results
+                .map((result) => `<li>${result}</li>`)
+                .join("");
 
             // Populate images with captions
-            modalImages.innerHTML = "";
-            projectData.images.forEach((image) => {
-                const figure = document.createElement("figure");
-                const img = document.createElement("img");
-                img.src = image.src;
-                img.alt = image.caption;
-
-                const caption = document.createElement("figcaption");
-                caption.textContent = image.caption;
-
-                figure.appendChild(img);
-                figure.appendChild(caption);
-                modalImages.appendChild(figure);
-            });
+            modalImages.innerHTML = projectData.images
+                .map(
+                    (image) =>
+                        `<figure><img src="${image.src}" alt="${image.caption}"><figcaption>${image.caption}</figcaption></figure>`
+                )
+                .join("");
 
             // Set modal link
             modalLink.href = projectData.link;
