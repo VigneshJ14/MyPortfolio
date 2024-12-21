@@ -123,6 +123,30 @@ document.addEventListener("DOMContentLoaded", () => {
             link: "https://github.com/yourusername/project2",
             reportLink: "assets/documents/ECE276C_Report.pdf",
         },
+        "financial-optimizer": {
+            title: "Personal Financial Literacy Optimizer",
+            description:
+                "This project explores the relationship between various personal financial habits and their effects on credit scores. By analyzing over 100,000 data points from a credit score classification dataset, the model predicts credit scores and suggests personalized changes to improve them. It includes insights into payment behavior, outstanding debt, credit utilization, and financial habits to help users optimize their finances.",
+            features: [
+                "Utilized a Kaggle credit score dataset with 100,000 data points and 28 features.",
+                "Performed extensive data preprocessing and feature extraction.",
+                "Developed a reverse optimization pipeline for actionable insights.",
+                "Selected an ExtraTreeClassifier with an accuracy and F1 score of over 85%.",
+                "Integrated user-friendly suggestions to optimize credit scores."
+            ],
+            results: [
+                "Identified key predictors of credit score: Payment of minimum amount, number of credit inquiries, delay from due date, and number of credit cards.",
+                "Provided actionable insights: Reducing credit cards and outstanding debt improves credit scores, and avoiding hard inquiries leads to better credit behavior."
+            ],
+            images: [
+                { src: "assets/images/credit-correlation-heatmap.png", caption: "Correlation heatmap showing key financial behaviors affecting credit scores." },
+                { src: "assets/images/credit-best-model.png", caption: "Model selection results with ExtraTreeClassifier achieving highest accuracy and F1 score." },
+                { src: "assets/images/website-view.png", caption: "Website view for the Financial Literacy Optimizer tool." }
+            ],
+            link: "https://github.com/yourusername/financial-optimizer",
+            reportLink: "assets/documents/Personal_Financial_Literacy_Optimizer.pdf"
+        },
+
         // Add more project data here
     };
 
