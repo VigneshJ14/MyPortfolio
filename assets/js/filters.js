@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 "After optimization: 92%",
             ],
             images: [
-                "assets/images/asl-preprocessing.png",
-                "assets/images/asl-pipeline.png",
-                "assets/images/asl-accuracy-chart.png",
+                { src: "assets/images/asl-preprocessing.png", caption: "Preprocessed ASL Gesture Image" },
+                { src: "assets/images/asl-pipeline.png", caption: "Bag-of-Words Pipeline Visualization" },
+                { src: "assets/images/asl-accuracy-chart.png", caption: "Accuracy Comparison Chart" },
             ],
             link: "https://github.com/yourusername/project1",
         },
@@ -106,7 +106,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Optimized for real-time robotic performance.",
             ],
             results: ["Achieved 95% estimation accuracy."],
-            images: ["assets/images/jacobian.png"],
+            images: [
+                { src: "assets/images/jacobian.png", caption: "Jacobian Estimation Visualization" },
+            ],
             link: "https://github.com/yourusername/project2",
         },
         // Add more project data here
@@ -144,13 +146,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 modalResults.appendChild(li);
             });
 
-            // Populate images
+            // Populate images with captions
             modalImages.innerHTML = "";
-            projectData.images.forEach((imageSrc) => {
+            projectData.images.forEach((image) => {
+                const figure = document.createElement("figure");
                 const img = document.createElement("img");
-                img.src = imageSrc;
-                img.alt = "Project Image";
-                modalImages.appendChild(img);
+                img.src = image.src;
+                img.alt = image.caption;
+
+                const caption = document.createElement("figcaption");
+                caption.textContent = image.caption;
+
+                figure.appendChild(img);
+                figure.appendChild(caption);
+                modalImages.appendChild(figure);
             });
 
             // Set modal link
