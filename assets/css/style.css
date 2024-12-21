@@ -265,4 +265,8 @@ footer {
         max-height: 95%;
         padding: 1.5rem;
     }
+
+    .modal-images {
+        flex-direction: column; /* Stack images on small screens */
+    }
 }
