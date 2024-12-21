@@ -91,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 "After optimization: 92%",
             ],
             images: [
-                { src: "assets/images/asl-preprocessing.png", caption: "Preprocessed ASL Gesture Image" },
                 { src: "assets/images/asl-pipeline.png", caption: "Bag-of-Words Pipeline Visualization" },
                 { src: "assets/images/asl-accuracy-chart.png", caption: "Accuracy Comparison Chart" },
             ],
