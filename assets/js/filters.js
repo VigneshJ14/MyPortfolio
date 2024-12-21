@@ -62,8 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.addEventListener("click", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("project-modal");
+    if (modal) {
+        modal.style.display = "none";
+    }
     const modalTitle = document.getElementById("modal-title");
     const modalDescription = document.getElementById("modal-description");
     const modalFeatures = document.getElementById("modal-features");
