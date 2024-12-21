@@ -37,47 +37,46 @@
                 </label>
             </div>
         </div>
-        
 
         <!-- Projects Grid -->
         <div class="projects-container">
-            <div class="project-card" data-category="machine-learning computer-vision">
+            <div class="project-card" data-modal="asl-recognition">
                 <img src="assets/images/asl-recognition.png" alt="American Sign Language Recognition">
                 <h3>American Sign Language Image Recognition</h3>
                 <p>Classifies ASL alphabets using computer vision.</p>
                 <a href="https://github.com/yourusername/project1" target="_blank">View Project</a>
             </div>
 
-            <div class="project-card" data-category="machine-learning computer-vision robotics">
-                <img src="assets/images/jacobian-estimation.png" alt="Project 2">
+            <div class="project-card" data-modal="jacobian-estimation">
+                <img src="assets/images/jacobian-estimation.png" alt="Neural Network Jacobian Estimation">
                 <h3>Neural Network Jacobian Estimation</h3>
                 <p>Centers Panda Robot images using neural network models.</p>
                 <a href="https://github.com/yourusername/project2" target="_blank">View Project</a>
             </div>
 
-            <div class="project-card" data-category="machine-learning data-science">
-                <img src="assets/images/churn-prediction.png" alt="Project 3">
+            <div class="project-card" data-modal="churn-prediction">
+                <img src="assets/images/churn-prediction.png" alt="Churn Prediction - Data Exploration">
                 <h3>Churn Prediction - Data Exploration</h3>
                 <p>Data-driven insights for predicting customer churn.</p>
                 <a href="https://github.com/yourusername/project3" target="_blank">View Project</a>
             </div>
 
-            <div class="project-card" data-category="data-science machine-learning">
-                <img src="assets/images/financial-optimizer.png" alt="Project 4">
+            <div class="project-card" data-modal="financial-optimizer">
+                <img src="assets/images/financial-optimizer.png" alt="Financial Literacy Optimizer">
                 <h3>Financial Literacy Optimizer</h3>
                 <p>Gives suggestions on finances to improve credit score.</p>
                 <a href="https://github.com/yourusername/project4" target="_blank">View Project</a>
             </div>
 
-            <div class="project-card" data-category="robotics">
-                <img src="assets/images/humanoid-simulation.png" alt="Project 5">
+            <div class="project-card" data-modal="humanoid-simulation">
+                <img src="assets/images/humanoid-simulation.png" alt="Simulating Humanoid Robot with ROS/Gazebo">
                 <h3>Simulating Humanoid Robot with ROS/Gazebo</h3>
                 <p>Simulating robot behavior in a virtual environment.</p>
                 <a href="https://github.com/yourusername/project5" target="_blank">View Project</a>
             </div>
 
-            <div class="project-card" data-category="machine-learning ">
-                <img src="assets/images/scalable-cnn.png" alt="Project 6">
+            <div class="project-card" data-modal="scalable-cnn">
+                <img src="assets/images/scalable-cnn.png" alt="Scalable CNN Design for CIFAR-10 on 2D-Systolic Array">
                 <h3>Scalable CNN Design for CIFAR-10 on 2D-Systolic Array</h3>
                 <p>Designs CNN with pruning/compression for efficient inference.</p>
                 <a href="https://github.com/yourusername/project6" target="_blank">View Project</a>
@@ -90,45 +89,25 @@
         <button id="scrollTopBtn">Top</button>
     </footer>
 
-    <script src="assets/js/filters.js"></script>
-
+    <!-- Single Modal Structure -->
     <div id="project-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 id="modal-title">Project Title</h2>
             <p id="modal-description">Details about the project will appear here.</p>
-            <a id="modal-link" href="#" target="_blank">View Project</a>
+
+            <h3>Key Features:</h3>
+            <ul id="modal-features"></ul>
+
+            <h3>Results:</h3>
+            <ul id="modal-results"></ul>
+
+            <div class="modal-images"></div>
+
+            <a id="modal-link" href="#" target="_blank" class="button">View Project on GitHub</a>
         </div>
     </div>
 
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="modal-title">American Sign Language Image Recognition</h2>
-            <p id="modal-description">
-                This project aimed to develop an algorithm capable of recognizing American Sign Language (ASL) hand gestures for the alphabet. By using a robust pipeline that incorporated advanced image preprocessing and machine learning techniques, this project achieved an accuracy of up to 92%. The model can classify hand gestures under moderate noise and adverse lighting conditions, making it highly practical for real-world applications like aiding communication with the deaf or ASL transcription.
-            </p>
-            <h3>Key Features:</h3>
-            <ul>
-                <li>Utilized the Bag-of-Words approach adapted for image classification.</li>
-                <li>Implemented Scale-Invariant Feature Transform (SIFT) for keypoint detection.</li>
-                <li>Used K-means Clustering to create a visual vocabulary for feature representation.</li>
-                <li>Classified gestures using a K-Nearest Neighbor (KNN) classifier.</li>
-                <li>Image preprocessing included Median Filtering, Image Sharpening, and Gamma Correction.</li>
-            </ul>
-            <h3>Results:</h3>
-            <ul>
-                <li>Initial accuracy: 58%</li>
-                <li>With dataset expansion: 90%</li>
-                <li>After optimization: 92%</li>
-            </ul>
-            <img src="assets/images/asl-preprocessing.png" alt="Preprocessed ASL Gesture Image">
-            <img src="assets/images/asl-pipeline.png" alt="Bag-of-Words Pipeline Visualization">
-            <img src="assets/images/asl-accuracy-chart.png" alt="Accuracy Comparison Chart">
-            <p>Explore more feature extraction methods, larger datasets, and dynamic gesture recognition.</p>
-            <a href="https://github.com/yourusername/project1" target="_blank" class="button">View Project on GitHub</a>
-            <a href="assets/documents/presentation.pdf" target="_blank" class="button">View Full Presentation</a>
-        </div>
-    </div>
+    <script src="assets/js/filters.js"></script>
 </body>
 </html>
