@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -29,8 +30,8 @@ nav {
 nav a {
     color: #fff;
     text-decoration: none;
-    position: relative;
     font-size: 1.1rem;
+    position: relative;
 }
 
 nav a.active {
@@ -38,17 +39,8 @@ nav a.active {
     border-bottom: 2px solid #007bff;
 }
 
-nav a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #007bff;
-    transition: width 0.3s;
-}
-
-nav a:hover::after {
-    width: 100%;
+nav a:hover {
+    text-decoration: underline;
 }
 
 /* Hero Section */
@@ -63,12 +55,6 @@ nav a:hover::after {
 
 .hero p {
     font-size: 1.2rem;
-}
-
-/* About Section */
-.about {
-    padding: 2rem;
-    background: #fff;
 }
 
 /* Projects Container */
@@ -112,18 +98,7 @@ nav a:hover::after {
     color: #555;
 }
 
-.project-card a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.project-card a:hover {
-    text-decoration: underline;
-}
-
-/* Multi-Select Scrollable Dropdown Filter */
+/* Multi-Select Dropdown Filter */
 .filter-dropdown-container {
     position: relative;
     text-align: center;
@@ -138,7 +113,6 @@ nav a:hover::after {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     cursor: pointer;
-    text-align: center;
 }
 
 .filter-dropdown-toggle:hover {
@@ -160,7 +134,6 @@ nav a:hover::after {
     width: 250px;
     padding: 0.5rem;
     z-index: 1000;
-    text-align: left;
 }
 
 .filter-dropdown label {
@@ -216,18 +189,20 @@ footer {
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
+    display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Prevent background scrolling */
 }
 
 .modal-content {
     background: #fff;
     padding: 2rem;
     border-radius: 10px;
-    width: 80%;
-    max-width: 800px;
-    max-height: 90%;
-    overflow-y: auto;
+    width: 80%; /* Adjusted for wider modal */
+    max-width: 900px; /* Ensures modal does not exceed 900px */
+    max-height: 90%; /* Limit height for smaller screens */
+    overflow-y: auto; /* Enable scrolling */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
     text-align: left;
@@ -268,6 +243,7 @@ footer {
     color: #555;
 }
 
+/* Close Button */
 .close {
     position: absolute;
     top: 10px;
@@ -285,7 +261,8 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .modal-content {
-        max-width: 90%;
+        max-width: 95%;
         max-height: 95%;
+        padding: 1.5rem;
     }
 }
