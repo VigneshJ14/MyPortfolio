@@ -115,9 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Both methods achieved comparable accuracy in centering the red box.",
             ],
             images: [
-                { src: "assets/images/jacobian.png", caption: "Visualization of Jacobian Estimation" },
-                { src: "assets/images/servoing-simulation.png", caption: "Simulation environment with the Franka Emika Panda robot" },
-            ],
+                { src: "assets/images/jacobian-accuracy.png", caption: "Analytical control camera view on left, neural network control camera view on right" },
+                { src: "assets/images/servoing-simulation.png", caption: "Simulation Environment of Franka Emika Panda Robot" },
+                { src: "assets/images/computation-time.png", caption: "Computation Time for Analytical vs Neural Network Jacobians" }
+            ]
+            ,
             link: "https://github.com/yourusername/project2",
             reportLink: "assets/documents/ECE276C_Report.pdf",
         },
