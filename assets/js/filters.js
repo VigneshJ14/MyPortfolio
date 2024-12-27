@@ -170,6 +170,29 @@ document.addEventListener("DOMContentLoaded", () => {
             link: "https://github.com/yourusername/ECommerce",
             reportLink: "assets/documents/Churn.pdf"
         },
+        "scalable-cnn": {
+            title: "Scalable CNN Design for CIFAR-10 on 2D Systolic Array",
+            description: "This project focuses on implementing scalable CNN designs on a 2D systolic array using pruning, compression, and multi-core implementations. The aim is to optimize power, performance, and area for FPGA-based deployments.",
+            features: [
+                "Implemented a scalable 8x8 systolic array with multi-channel capabilities.",
+                "Integrated pruning and Huffman compression to optimize memory bandwidth and power consumption.",
+                "Explored multi-core designs to enhance throughput by processing tiles in parallel.",
+                "Quantization-aware training and layer-specific pruning strategies for efficient CNN designs.",
+            ],
+            results: [
+                "Achieved an accuracy of 91.42% with quantization-aware training.",
+                "Implemented multi-core systolic arrays achieving a throughput of 256 operations per clock cycle.",
+                "Compression ratio improved to 1.61 using structured pruning with Huffman compression.",
+                "Achieved a 1mW power improvement using clock-gating schemes for MAC operations."
+            ],
+            images: [
+                { src: "assets/images/2d-systolic-array-diagram.png", caption: "Diagram of 2D Systolic Array Architecture" },
+                { src: "assets/images/pruning-compression-results.png", caption: "Comparison of Pruning and Compression Results" },
+                { src: "assets/images/multi-core-systolic-array.png", caption: "Multi-Core Systolic Array Implementation" }
+            ],
+            link: "https://github.com/yourusername/project-scalable-cnn"
+        },
+
 
 
         // Add more project data here
