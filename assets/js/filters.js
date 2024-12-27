@@ -146,6 +146,31 @@ document.addEventListener("DOMContentLoaded", () => {
             link: "https://github.com/yourusername/financial-optimizer",
             reportLink: "assets/documents/Personal_Financial_Literacy_Optimizer.pdf"
         },
+        "churn-prediction": {
+            title: "Analysis and Prediction of Churn Rates",
+            description:
+                "This project focuses on predicting customer churn for e-commerce platforms by analyzing key factors like tenure, complaints, and order frequency. Models such as Logistic Regression and Gaussian Naive Bayes were employed, achieving an accuracy of up to 85.3%. The project highlights the significance of tenure and complaint resolution in reducing churn rates.",
+            features: [
+                "Analyzed 5630 data points with 20 features to identify churn patterns.",
+                "Utilized Z-score normalization for fair comparison across features.",
+                "Generated a heatmap to visualize correlations between features and churn.",
+                "Implemented Logistic Regression and Gaussian Naive Bayes for churn prediction.",
+                "Identified tenure and complaints as the most significant predictors of churn.",
+            ],
+            results: [
+                "Logistic Regression Accuracy: 75.4%",
+                "Gaussian Naive Bayes Accuracy: 85.3%",
+                "Significant predictors: Tenure (-0.34 correlation) and Complaint (0.25 correlation).",
+            ],
+            images: [
+                { src: "assets/images/churn-heatmap.png", caption: "Correlation Heatmap of Features" },
+                { src: "assets/images/tenure-distribution.png", caption: "Tenure Distribution for Churned vs. Retained Customers" },
+                { src: "assets/images/complaint-churn.png", caption: "Churn Rates by Complaint Status" },
+            ],
+            link: "https://github.com/yourusername/ECommerce",
+            reportLink: "assets/documents/Churn.pdf"
+        },
+
 
         // Add more project data here
     };
