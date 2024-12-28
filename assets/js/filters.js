@@ -207,14 +207,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Plan to achieve efficient path-planning algorithms for tasks in dynamic environments.",
             ],
             images: [
-                //{ src: "assets/images/placeholder-humanoid.png", caption: "Placeholder for Humanoid Robot Simulation Visualization" }
+                { src: "assets/images/placeholder-humanoid.png", caption: "Placeholder for Humanoid Robot Simulation Visualization" }
             ],
             link: "https://github.com/yourusername/humanoid-simulation",
             demo: {
                 src: "assets/videos/placeholder-demo.mp4",
                 caption: "Demo Video Placeholder for Humanoid Robot Simulation"
             }
-        }
+        },
 
 
 
