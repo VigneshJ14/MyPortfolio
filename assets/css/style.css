@@ -59,27 +59,35 @@ nav a:hover {
 
 /* Projects Container */
 .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin: 1rem;
+    display: grid; /* Use CSS Grid for a clean layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 2rem; /* Add space between the cards */
+    margin: 2rem auto; /* Center the grid and add some space around it */
+    max-width: 1200px; /* Optional: Limit the width of the grid for better alignment */
 }
 
+/* Project Card Styling */
 .project-card {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 1rem;
-    max-width: 300px;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.6s ease-in-out;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
 .project-card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .project-card img {
     max-width: 100%;
