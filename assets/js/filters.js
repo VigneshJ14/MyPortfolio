@@ -192,6 +192,30 @@ document.addEventListener("DOMContentLoaded", () => {
             ],
             link: "https://github.com/yourusername/project-scalable-cnn"
         },
+        "humanoid-simulation": {
+            title: "Simulating Humanoid Robot with ROS/Gazebo",
+            description:
+                "This project aims to simulate a humanoid robot using ROS and Gazebo. The goal is to develop and analyze robotic behaviors in a virtual environment, enabling tasks like motion planning, collision avoidance, and environment interaction.",
+            features: [
+                "Develop a 3D humanoid robot model with URDF (Unified Robot Description Format).",
+                "Integrate ROS for real-time control and simulation of the robot's joints and sensors.",
+                "Simulate basic robotic behaviors such as walking, object manipulation, and obstacle avoidance.",
+                "Design a control pipeline for integrating motion planning and trajectory optimization.",
+            ],
+            results: [
+                "Expected outcomes: Development of a functional humanoid robot model with accurate physics-based simulation.",
+                "Plan to achieve efficient path-planning algorithms for tasks in dynamic environments.",
+            ],
+            images: [
+                //{ src: "assets/images/placeholder-humanoid.png", caption: "Placeholder for Humanoid Robot Simulation Visualization" }
+            ],
+            link: "https://github.com/yourusername/humanoid-simulation",
+            demo: {
+                src: "assets/videos/placeholder-demo.mp4",
+                caption: "Demo Video Placeholder for Humanoid Robot Simulation"
+            }
+        }
+
 
 
 
