@@ -3,37 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | My Portfolio</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <style>
+        html {
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        section {
+            padding: 2rem 1rem;
+        }
+
+        nav a {
+            cursor: pointer; /* Ensures links act as section navigators */
+        }
+    </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <main>
+    <!-- Home Section -->
+    <main id="home">
         <section class="hero">
             <h1>Welcome to My Portfolio</h1>
-            <p>Hello, I'm <strong>Vignesh Jayananth</strong>. I am currently a UCSD graduate student in Machine Learning and Data Science</p>
+            <p>Hello, I'm <strong>Vignesh Jayananth</strong>. I am currently a UCSD graduate student in Machine Learning and Data Science.</p>
         </section>
         <section class="about">
             <h2>About Me</h2>
-            <p>
-                I am an electrical engineer passionate about Robotics and Machine Learning
-            </p>
+            <p>I am an electrical engineer passionate about Robotics and Machine Learning.</p>
         </section>
     </main>
 
+    <!-- Projects Section -->
+    <section id="projects">
+        <h1>My Projects</h1>
+
+        <!-- Multi-Category Scrollable Dropdown Filter -->
+        <div class="filter-dropdown-container">
+            <button id="filter-toggle" class="filter-dropdown-toggle">Filter by Categories</button>
+            <div id="filter-checkboxes" class="filter-dropdown">
+                <label>
+                    <input type="checkbox" value="machine-learning" class="filter-checkbox"> Machine Learning
+                </label>
+                <label>
+                    <input type="checkbox" value="robotics" class="filter-checkbox"> Robotics
+                </label>
+                <label>
+                    <input type="checkbox" value="computer-vision" class="filter-checkbox"> Computer Vision
+                </label>
+                <label>
+                    <input type="checkbox" value="data-science" class="filter-checkbox"> Data Science
+                </label>
+            </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-container">
+            <div class="project-card" data-category="machine-learning" data-modal="asl-recognition">
+                <img src="assets/images/asl-recognition.png" alt="American Sign Language Recognition">
+                <h3>American Sign Language Image Recognition</h3>
+                <p>Classifies ASL alphabets using computer vision.</p>
+                <a href="https://github.com/yourusername/project1" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card" data-category="robotics" data-modal="jacobian-estimation">
+                <img src="assets/images/jacobian-estimation.png" alt="Neural Network Jacobian Estimation">
+                <h3>Neural Network Jacobian Estimation</h3>
+                <p>Centers Panda Robot images using neural network models.</p>
+                <a href="https://github.com/yourusername/project2" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card" data-category="data-science" data-modal="churn-prediction">
+                <img src="assets/images/churn-prediction.png" alt="Churn Prediction - Data Exploration">
+                <h3>Churn Prediction - Data Exploration</h3>
+                <p>Data-driven insights for predicting customer churn.</p>
+                <a href="https://github.com/yourusername/project3" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card" data-category="data-science machine-learning" data-modal="financial-optimizer">
+                <img src="assets/images/financial-optimizer.png" alt="Financial Literacy Optimizer">
+                <h3>Financial Literacy Optimizer</h3>
+                <p>Gives suggestions on finances to improve credit score.</p>
+                <a href="https://github.com/yourusername/project4" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card" data-category="robotics" data-modal="humanoid-simulation">
+                <img src="assets/images/humanoid-simulation.png" alt="Simulating Humanoid Robot with ROS/Gazebo">
+                <h3>Simulating Humanoid Robot with ROS/Gazebo</h3>
+                <p>Simulating robot behavior in a virtual environment.</p>
+                <a href="https://github.com/yourusername/project5" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card" data-category="machine-learning" data-modal="scalable-cnn">
+                <img src="assets/images/scalable-cnn.png" alt="Scalable CNN Design for CIFAR-10 on 2D-Systolic Array">
+                <h3>Scalable CNN Design for CIFAR-10 on 2D-Systolic Array</h3>
+                <p>Designs CNN with pruning/compression for efficient inference.</p>
+                <a href="https://github.com/yourusername/project6" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <p>Email: <a href="mailto:vjayanan@ucsd.edu">vjayanan@ucsd.edu</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/vigneshjayananth123/" target="_blank">My LinkedIn</a></p>
+        <p>GitHub: <a href="https://github.com/VigneshJ14" target="_blank">My GitHub</a></p>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Vignesh | All Rights Reserved</p>
         <button id="scrollTopBtn">Top</button>
     </footer>
 
+    <!-- Single Modal Structure -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Project Title</h2>
+            <p id="modal-description">Details about the project will appear here.</p>
+
+            <h3>Key Features:</h3>
+            <ul id="modal-features"></ul>
+
+            <h3>Results:</h3>
+            <ul id="modal-results"></ul>
+
+            <div class="modal-images">
+                <!-- Images will be dynamically populated here -->
+            </div>
+
+            <a id="modal-link" href="#" target="_blank" class="button">View Project on GitHub</a>
+        </div>
+    </div>
+
+    <!-- Include the script -->
     <script src="assets/js/filters.js"></script>
 </body>
 </html>
