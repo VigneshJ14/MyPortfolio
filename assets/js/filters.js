@@ -113,8 +113,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Provides a foundation for AI-powered coaching tools"
             ],
             images: [
-                { src: "assets/images/volleyball-spike.png", caption: "YOLOv8 + MediaPipe pose estimation example for spike action" },
-                { src: "assets/images/volleyball-features.png", caption: "Biomechanical feature importance across models" }
+                { src: "assets/images/Pose_Estimation.png", caption: "YOLOv8 + MediaPipe pose estimation example for spike action" },
+                { src: "assets/images/feature_importance_top2.png", caption: "Biomechanical feature importance across models" }
             ],
             link: "https://github.com/VigneshJ14/volleyball-swing-quality"
         },
