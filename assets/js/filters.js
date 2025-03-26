@@ -99,6 +99,63 @@ document.addEventListener("DOMContentLoaded", () => {
             ],
             link: "https://github.com/yourusername/project1",
         },
+        "volleyball-spike": {
+            title: "Volleyball Spike Quality Prediction",
+            description: "This project uses pose estimation and machine learning to classify the quality of a volleyball spike based on biomechanics extracted from game footage.",
+            features: [
+                "Collected video data from national and high school teams",
+                "Used YOLOv8 for player detection and MediaPipe for pose estimation",
+                "Extracted 6 biomechanical features (e.g., jump height, arm swing velocity)"
+            ],
+            results: [
+                "Polynomial SVM and Boosted Decision Stumps achieved 96% accuracy",
+                "Torso rotation, hip displacement, and approach speed were top predictors",
+                "Provides a foundation for AI-powered coaching tools"
+            ],
+            images: [
+                { src: "assets/images/volleyball-spike.png", caption: "YOLOv8 + MediaPipe pose estimation example for spike action" },
+                { src: "assets/images/volleyball-features.png", caption: "Biomechanical feature importance across models" }
+            ],
+            link: "https://github.com/VigneshJ14/volleyball-swing-quality"
+        },
+        "cpu-llm": {
+            title: "CPU-Deployable LLMs",
+            description: "Benchmarked performance of quantized LLMs (4-bit and 8-bit) across multiple CPU-only configurations using TinyLlama, Open-LLaMA, and Mistral.",
+            features: [
+                "Simulated 3 hardware configs: 4-core/8GB, 4-core/16GB, 6-core/8GB",
+                "Used GSM8K dataset to evaluate accuracy, latency, throughput, and RAM",
+                "Built performance pipeline using Python, CTransformers, and psutil"
+            ],
+            results: [
+                "TinyLlama (Q4) had lowest latency (2.91s) and highest throughput (9.02 tokens/s)",
+                "Mistral (Q8) reached 30% accuracy on GSM8K with 4-core/8GB config",
+                "4-bit quantization reduced RAM by 50% with only minor accuracy tradeoff"
+            ],
+            images: [
+                { src: "assets/images/cpu-llm.png", caption: "LLM performance comparison under different CPU constraints" },
+                { src: "assets/images/llm-results.png", caption: "Latency and RAM usage across quantized LLMs" }
+            ],
+            link: "https://github.com/VigneshJ14/cpu-deployable-llms"
+        },
+        "pdf-to-audio": {
+            title: "PDF to AI Audio (In Progress)",
+            description: "A Raspberry Pi 5-based AI TTS system that converts uploaded PDFs or scraped web novel chapters into high-quality speech audio using open-source text-to-speech models.",
+            features: [
+                "Accepts PDFs from mobile upload or scrapes Light Novel World chapters",
+                "Uses text preprocessing and batching to prepare content for TTS models",
+                "Exploring fast TTS models like Bark, Coqui, and Piper for ARM CPUs"
+            ],
+            results: [
+                "TTS voice testing in progress (Piper and Bark performing best so far)",
+                "Frontend allows PDF uploads and plays back generated MP3 audio",
+                "Optimizing for energy efficiency and caching on-device audio"
+            ],
+            images: [
+                { src: "assets/images/pdf-to-audio.png", caption: "System overview for the PDF to Audio pipeline" }
+            ],
+            link: "https://github.com/VigneshJ14/pdf-to-ai-audio"
+        },
+
         "jacobian-estimation": {
             title: "Neural Network Jacobian Estimation",
             description:
