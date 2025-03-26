@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         "pdf-to-audio": {
             title: "PDF to AI Audio (In Progress)",
-            description: "A Raspberry Pi 5-based AI TTS system that converts uploaded PDFs or scraped web novel chapters into high-quality speech audio using open-source text-to-speech models.",
+            description: "A Raspberry Pi 5-based AI TTS system that converts uploaded PDFs or scraped web articles into high-quality speech audio using open-source text-to-speech models.",
             features: [
                 "Accepts PDFs from mobile upload or scrapes Light Novel World chapters",
                 "Uses text preprocessing and batching to prepare content for TTS models",
