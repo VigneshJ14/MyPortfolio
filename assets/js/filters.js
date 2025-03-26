@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "4-bit quantization reduced RAM by 50% with only minor accuracy tradeoff"
             ],
             images: [
-                { src: "assets/images/accuracies_harware_config.png", caption: "LLM accuracy comparison under different CPU constraints" },
+                { src: "assets/images/accuracies_hardware_config.png", caption: "LLM accuracy comparison under different CPU constraints" },
                 { src: "assets/images/throughput_hardware_config.png", caption: "LLM throughput comparison under different CPU constraints" }
             ],
             link: "https://github.com/VigneshJ14/cpu-deployable-llms"
