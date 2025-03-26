@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "CPU-Deployable LLMs",
             description: "Benchmarked performance of quantized LLMs (4-bit and 8-bit) across multiple CPU-only configurations using TinyLlama, Open-LLaMA, and Mistral.",
             features: [
-                "Simulated 3 hardware configs: 4-core/8GB, 4-core/16GB, 6-core/8GB",
+                "Simulated 3 hardware configs: 4-core/8GB (H1), 4-core/16GB (H2), 6-core/8GB (H3)",
                 "Used GSM8K dataset to evaluate accuracy, latency, throughput, and RAM",
                 "Built performance pipeline using Python, CTransformers, and psutil"
             ],
