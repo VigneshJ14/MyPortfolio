@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { src: "assets/images/asl-pipeline.png", caption: "Bag-of-Words Pipeline Visualization" },
                 { src: "assets/images/asl-accuracy-chart.png", caption: "Accuracy Comparison Chart" },
             ],
-            link: "https://github.com/yourusername/project1",
+            //link: "https://github.com/yourusername/project1",
         },
         "volleyball-spike": {
             title: "Volleyball Spike Quality Prediction",
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { src: "assets/images/Pose_Estimation.png", caption: "YOLOv8 + MediaPipe pose estimation example for spike action" },
                 { src: "assets/images/feature_importance_top2.png", caption: "Biomechanical feature importance across models" }
             ],
-            link: "https://github.com/VigneshJ14/volleyball-swing-quality"
+            //link: "https://github.com/VigneshJ14/volleyball-swing-quality"
         },
         "cpu-llm": {
             title: "CPU-Deployable LLMs",
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { src: "assets/images/accuracies_hardware_config.png", caption: "LLM accuracy comparison under different CPU constraints" },
                 { src: "assets/images/throughput_hardware_config.png", caption: "LLM throughput comparison under different CPU constraints" }
             ],
-            link: "https://github.com/VigneshJ14/cpu-deployable-llms"
+            //link: "https://github.com/VigneshJ14/cpu-deployable-llms"
         },
         "pdf-to-audio": {
             title: "PDF to AI Audio (In Progress)",
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
             images: [
                 { src: "assets/images/pdf-to-audio.png", caption: "System overview for the PDF to Audio pipeline" }
             ],
-            link: "https://github.com/VigneshJ14/pdf-to-ai-audio"
+            //link: "https://github.com/VigneshJ14/pdf-to-ai-audio"
         },
 
         "jacobian-estimation": {
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { src: "assets/images/computation-time.png", caption: "Computation Time for Analytical vs Neural Network Jacobians" }
             ]
             ,
-            link: "https://github.com/yourusername/project2",
+            //link: "https://github.com/yourusername/project2",
             reportLink: "assets/documents/ECE276C_Report.pdf",
         },
         "financial-optimizer": {
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { src: "assets/images/credit-best-model.png", caption: "Model selection results with ExtraTreeClassifier achieving highest accuracy and F1 score." },
                 { src: "assets/images/website-view.png", caption: "Website view for the Financial Literacy Optimizer tool." }
             ],
-            link: "https://github.com/yourusername/financial-optimizer",
+            //link: "https://github.com/yourusername/financial-optimizer",
             reportLink: "assets/documents/Personal_Financial_Literacy_Optimizer.pdf"
         },
         "churn-prediction": {
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { src: "assets/images/tenure-distribution.png", caption: "Tenure Distribution for Churned vs. Retained Customers" },
                 { src: "assets/images/complaint-churn.png", caption: "Churn Rates by Complaint Status" },
             ],
-            link: "https://github.com/yourusername/ECommerce",
+            //link: "https://github.com/yourusername/ECommerce",
             reportLink: "assets/documents/Churn.pdf"
         },
         "scalable-cnn": {
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { src: "assets/images/pruning-compression-results.png", caption: "Comparison of Pruning and Compression Results" },
                 { src: "assets/images/multi-core-systolic-array.png", caption: "Multi-Core Systolic Array Implementation" }
             ],
-            link: "https://github.com/yourusername/project-scalable-cnn"
+            //link: "https://github.com/yourusername/project-scalable-cnn"
         },
         "humanoid-simulation": {
             title: "Simulating Humanoid Robot with ROS/Gazebo",
@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
             images: [
                 { src: "assets/images/placeholder-humanoid.png", caption: "Placeholder for Humanoid Robot Simulation Visualization" }
             ],
-            link: "https://github.com/yourusername/humanoid-simulation",
+            //link: "https://github.com/yourusername/humanoid-simulation",
             demo: {
                 src: "assets/videos/placeholder-demo.mp4",
                 caption: "Demo Video Placeholder for Humanoid Robot Simulation"
