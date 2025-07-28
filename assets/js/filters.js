@@ -294,8 +294,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 { src: "assets/images/yolov3-light.png", caption: "YOLOv3 with MobileNetV2 Backbone - Inference Output" },
                 { src: "assets/images/yolov3-attention.png", caption: "YOLOv3 with Attention Layers - Inference Output" },
 
-    ],
-        },
+            ],
+        }
 
 
 
