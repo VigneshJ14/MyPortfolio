@@ -291,6 +291,31 @@ document.addEventListener("DOMContentLoaded", () => {
                 { src: "assets/images/yolov3-attention.png", caption: "YOLOv3 with Attention Layers - Inference Output" },
 
             ],
+        },
+        "personal-finance-tracker": {
+            title: "Personal Finance Tracker",
+            description: "A comprehensive command-line personal finance tracking system that allows users to manage income, expenses, and generate detailed financial reports. Built with a modular architecture featuring database abstraction, automated setup scripts, and robust error handling. The system provides actionable financial insights through categorized analysis and enables data portability through CSV export functionality.",
+            features: [
+                "Transaction Management: Add, categorize, and search income/expense transactions",
+                "Financial Analysis: Real-time calculations of total income, expenses, and net balance",
+                "Category Management: Custom expense/income categories with percentage breakdowns",
+                "Data Visualization: Beautiful formatted tables using Tabulate library",
+                "CSV Export: Automated financial report generation for external analysis",
+                "Monthly Trends: Track financial performance over time with monthly summaries",
+                "Search Functionality: Find specific transactions by description or category"
+            ],
+            results: [
+                "Object-oriented design with clean separation of concerns",
+                "SQL query optimization with proper indexing for performance",
+                "Cross-platform compatibility (Windows, Linux, macOS)",
+                "Comprehensive error handling for database operations and user input",
+                "Automated setup with one-command database initialization",
+                "Data validation and sanitization for robust application development"
+            ],
+            images: [
+                { src: "assets/images/personal-finance-tracker.png", caption: "Personal Finance Tracker CLI Interface" },
+                { src: "assets/images/finance-tracker-csv.png", caption: "Exported CSV example" }
+            ],
         }
 
 
