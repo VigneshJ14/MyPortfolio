@@ -266,11 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
             images: [
                 { src: "assets/images/placeholder-humanoid.png", caption: "Placeholder for Humanoid Robot Simulation Visualization" }
             ],
-            //link: "https://github.com/yourusername/humanoid-simulation",
-            demo: {
-                src: "assets/videos/placeholder-demo.mp4",
-                caption: "Demo Video Placeholder for Humanoid Robot Simulation"
-            },
+            //link: "https://github.com/yourusername/humanoid-simulation"
         },
         "yolo-variations": {
             title: "Variations of YOLOv3 for Object Detection",
