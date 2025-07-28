@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
             images: [
                 { src: "assets/images/personal-finance-tracker.png", caption: "Personal Finance Tracker CLI Interface" },
                 { src: "assets/images/finance-tracker-csv.png", caption: "Exported CSV example" }
-            ],
+            ]
         }
 
 
