@@ -270,7 +270,30 @@ document.addEventListener("DOMContentLoaded", () => {
             demo: {
                 src: "assets/videos/placeholder-demo.mp4",
                 caption: "Demo Video Placeholder for Humanoid Robot Simulation"
-            }
+            },
+        "yolo-variations": {
+            title: "Variations of YOLOv3 for Object Detection",
+            description: "This project explored different YOLOv3 architecture variations to balance real-time object detection speed and accuracy. The classic YOLOv3 model was modified by replacing its backbone (Darknet-53) with MobileNetV2 and by adding attention modules to the heads. All models were implemented from scratch in PyTorch and trained on the PASCAL VOC dataset.",
+            features: [
+                "Implemented YOLOv3 from scratch using PyTorch.",
+                "Trained on the PASCAL VOC dataset (2007 and 2012 splits).",
+                "Explored three architectures: Classic YOLOv3, YOLOv3 with MobileNetV2 backbone, and YOLOv3 with attention layers.",
+                "Used multiple loss functions: Binary Cross Entropy, MSE, and Cross Entropy.",
+                "Measured model performance via mean average precision (mAP) and inference time."
+            ],
+            results: [
+                "Classic YOLOv3 achieved highest accuracy (mAP) but showed signs of undertraining.",
+                "Lightweight model (MobileNetV2) had faster loss convergence but underperformed in accuracy.",
+                "Attention-augmented model had best training loss but lower mAP due to possibly insufficient testing.",
+                "Inference time was highest for attention model; lightweight model unexpectedly slower than classic."
+            ],
+            images: [
+                { src: "assets/images/yolo-architecture.png", caption: "Classic YOLOv3 architecture" }
+                { src: "assets/images/yolo-classic-inference.png", caption: "YOLOv3 Classic Model - Inference Output" },
+                { src: "assets/images/yolo-light-inference.png", caption: "YOLOv3 with MobileNetV2 Backbone - Inference Output" },
+                { src: "assets/images/yolo-attention-inference.png", caption: "YOLOv3 with Attention Layers - Inference Output" },
+
+    ],
         },
 
 
