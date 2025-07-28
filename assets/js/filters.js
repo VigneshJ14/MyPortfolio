@@ -271,6 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 src: "assets/videos/placeholder-demo.mp4",
                 caption: "Demo Video Placeholder for Humanoid Robot Simulation"
             },
+        },
         "yolo-variations": {
             title: "Variations of YOLOv3 for Object Detection",
             description: "This project explored different YOLOv3 architecture variations to balance real-time object detection speed and accuracy. The classic YOLOv3 model was modified by replacing its backbone (Darknet-53) with MobileNetV2 and by adding attention modules to the heads. All models were implemented from scratch in PyTorch and trained on the PASCAL VOC dataset.",
@@ -288,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Inference time was highest for attention model; lightweight model unexpectedly slower than classic."
             ],
             images: [
-                { src: "assets/images/yolov3-architecture.png", caption: "Classic YOLOv3 architecture" }
+                { src: "assets/images/yolov3-architecture.png", caption: "Classic YOLOv3 architecture" },
                 { src: "assets/images/yolov3-classic.png", caption: "YOLOv3 Classic Model - Inference Output" },
                 { src: "assets/images/yolov3-light.png", caption: "YOLOv3 with MobileNetV2 Backbone - Inference Output" },
                 { src: "assets/images/yolov3-attention.png", caption: "YOLOv3 with Attention Layers - Inference Output" },
