@@ -288,10 +288,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Inference time was highest for attention model; lightweight model unexpectedly slower than classic."
             ],
             images: [
-                { src: "assets/images/yolo-architecture.png", caption: "Classic YOLOv3 architecture" }
-                { src: "assets/images/yolo-classic-inference.png", caption: "YOLOv3 Classic Model - Inference Output" },
-                { src: "assets/images/yolo-light-inference.png", caption: "YOLOv3 with MobileNetV2 Backbone - Inference Output" },
-                { src: "assets/images/yolo-attention-inference.png", caption: "YOLOv3 with Attention Layers - Inference Output" },
+                { src: "assets/images/yolov3-architecture.png", caption: "Classic YOLOv3 architecture" }
+                { src: "assets/images/yolov3-classic.png", caption: "YOLOv3 Classic Model - Inference Output" },
+                { src: "assets/images/yolov3-light.png", caption: "YOLOv3 with MobileNetV2 Backbone - Inference Output" },
+                { src: "assets/images/yolov3-attention.png", caption: "YOLOv3 with Attention Layers - Inference Output" },
 
     ],
         },
